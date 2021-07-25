@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+h1 {
+  font-weight: 300;
+  margin-bottom: 2rem;
+  position: relative;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  min-width: 100%;
+
+  font-family: 'Nunito', sans-serif;
+}
+
+.main {
+  padding: 3rem;
+  margin: 4rem auto;
+
+  min-width: 420px;
+  min-height: 40vh;
+
+  background: #1d1d1dde;
+
+  box-shadow: 5px 5px 15px rgba(156, 152, 152, 0.2);
+  border-radius: 12px;
+}
+
+.salva-campo {
+  position: relative;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.salva-campo h1 {
+  position: relative;
+  margin: 4rem auto;
+  outline: none;
+  display: flex;
+  justify-content: center;
+}
+
+.salva-campo a {
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+  text-decoration: none;
+  color: #c2a287;
+  font-size: 12pt;
+}
+
+
+@media(max-width:453px) {
+
+  .main {
+    min-width: 300px;
+    min-height: 40vh;
+  }
+}
+
+@media(max-width:374px) {
+
+  .main {
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 300px;
+    min-height: 40vh;
+  }
+}
+
+@media(max-width:297px) {
+
+  .main {
+    padding: 2rem;
+    margin: 4rem auto;
+    width: 400px;
+    min-height: 50vh;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    min-width: 10%;
+
+    font-family: 'Nunito', sans-serif;
+  }
+}

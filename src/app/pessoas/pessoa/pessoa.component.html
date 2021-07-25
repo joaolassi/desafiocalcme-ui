@@ -1,0 +1,33 @@
+<div class="p-grid-12 container">
+  <div class="main">
+    <h1>Cadastro de pessoa</h1>
+    <form #f="ngForm" (ngSubmit)="salvar(f)">
+
+      <div class="input-campo">
+        <input type="text" name="nome" [(ngModel)]="pessoa.nome" placeholder="Nome" #nome="ngModel" pInputText required
+          minlength="10">
+        <div *ngIf="nome.hasError('required') && nome.touched" style="color: white;"> Informe um nome</div>
+        <div *ngIf="nome.hasError('minlength') && nome.touched" style="color: white;">O nome deve ser completo</div>
+      </div>
+
+      <div class="input-campo">
+        <input type="text" name="email" [(ngModel)]="pessoa.email" placeholder="Email" #email="ngModel" pInputText
+          required email>
+        <div *ngIf="email.hasError('required') && email.touched" style="color: white;">Informe um email</div>
+        <div *ngIf="email.hasError('email') && email.touched" style="color: white;">Digite um email válido</div>
+      </div>
+
+      <div class="input-campo">
+
+        <p-inputMask class="tel-campo" value="pessoa.telefone" mask="(99)99999-9999" name="telefone"
+          #telefone="ngModel" [(ngModel)]="pessoa.telefone" placeholder="Telefone" [required]="true"></p-inputMask>
+        <div *ngIf="telefone.hasError('required') && telefone.touched" style="color: white;">Informe um telefone</div>
+      </div>
+
+      <div class="p-grid-12">
+        <button pButton type="submit" [disabled]="!f.valid" label="Enviar"></button>
+      </div>
+
+    </form>
+  </div>
+</div>
